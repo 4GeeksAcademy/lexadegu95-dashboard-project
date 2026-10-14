@@ -1,0 +1,347 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Responsive business analytics dashboard">
+  <title>Overview | Elevate Analytics</title>
+  <link rel="stylesheet" href="./dist/output.css">
+</head>
+
+<body class="min-h-screen bg-slate-50 text-slate-900 antialiased">
+
+  <div class="min-h-screen lg:flex">
+
+    <!-- Sidebar and mobile navigation -->
+    <aside class="border-b border-slate-200 bg-white lg:sticky lg:top-0 lg:h-screen lg:w-64 lg:shrink-0 lg:overflow-y-auto lg:border-b-0 lg:border-r">
+      <div class="flex items-center justify-between px-5 py-5">
+        <a href="#overview" class="flex items-center gap-3 font-bold tracking-tight">
+          <span class="flex size-10 items-center justify-center rounded-xl bg-violet-600 text-xl text-white">E</span>
+          <span class="text-lg">Elevate<span class="text-violet-600">.</span></span>
+        </a>
+        <span class="rounded-full bg-violet-50 px-2.5 py-1 text-xs font-semibold text-violet-700">PRO</span>
+      </div>
+
+      <nav aria-label="Main navigation" class="flex gap-2 overflow-x-auto px-4 pb-4 lg:flex-col lg:gap-1 lg:overflow-visible lg:px-3 lg:pt-5">
+        <a href="#overview" aria-current="page" class="flex shrink-0 items-center gap-3 rounded-xl bg-violet-50 px-4 py-3 text-sm font-semibold text-violet-700">
+          <span aria-hidden="true">▦</span> Overview
+        </a>
+        <a href="#analytics" class="flex shrink-0 items-center gap-3 rounded-xl px-4 py-3 text-sm font-medium text-slate-500 transition hover:bg-slate-100 hover:text-slate-900">
+          <span aria-hidden="true">↗</span> Analytics
+        </a>
+        <a href="#orders" class="flex shrink-0 items-center gap-3 rounded-xl px-4 py-3 text-sm font-medium text-slate-500 transition hover:bg-slate-100 hover:text-slate-900">
+          <span aria-hidden="true">▤</span> Orders
+        </a>
+        <a href="#customers" class="flex shrink-0 items-center gap-3 rounded-xl px-4 py-3 text-sm font-medium text-slate-500 transition hover:bg-slate-100 hover:text-slate-900">
+          <span aria-hidden="true">♙</span> Customers
+        </a>
+        <a href="#reports" class="flex shrink-0 items-center gap-3 rounded-xl px-4 py-3 text-sm font-medium text-slate-500 transition hover:bg-slate-100 hover:text-slate-900">
+          <span aria-hidden="true">▧</span> Reports
+        </a>
+      </nav>
+
+      <div class="mx-4 hidden rounded-2xl bg-slate-900 p-5 text-white lg:mt-8 lg:block">
+        <p class="text-sm font-semibold">Need more insights?</p>
+        <p class="mt-2 text-xs leading-5 text-slate-300">
+          Review your performance and discover new opportunities.
+        </p>
+        <a href="#reports" class="mt-4 inline-flex rounded-lg bg-white px-3 py-2 text-xs font-semibold text-slate-900 hover:bg-violet-100">
+          View reports →
+        </a>
+      </div>
+
+      <div class="hidden border-t border-slate-200 p-4 lg:mt-8 lg:block">
+        <div class="flex items-center gap-3 rounded-xl p-2">
+          <div class="flex size-10 items-center justify-center rounded-full bg-violet-100 font-bold text-violet-700">JD</div>
+          <div class="min-w-0">
+            <p class="truncate text-sm font-semibold">Jordan Davis</p>
+            <p class="truncate text-xs text-slate-500">Workspace admin</p>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main content -->
+    <main id="overview" class="min-w-0 flex-1">
+      <!-- Header -->
+      <header class="flex flex-col gap-4 border-b border-slate-200 bg-white px-4 py-5 sm:px-6 md:flex-row md:items-center md:justify-between lg:px-8">
+        <div>
+          <p class="text-sm text-slate-500">Workspace / Dashboard</p>
+          <h1 class="mt-1 text-2xl font-bold tracking-tight sm:text-3xl">Overview</h1>
+          <p class="mt-1 text-sm text-slate-500">Here is what's happening with your business.</p>
+        </div>
+
+        <div class="flex flex-wrap items-center gap-3">
+          <label for="period" class="sr-only">Reporting period</label>
+          <select id="period" class="min-w-0 rounded-xl border border-slate-200 bg-white px-3 py-2.5 text-sm font-medium outline-none focus:border-violet-500 focus:ring-2 focus:ring-violet-100">
+            <option>Last 30 days</option>
+            <option>Last 7 days</option>
+            <option>Last 90 days</option>
+          </select>
+          <a href="#orders" class="rounded-xl bg-violet-600 px-4 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:bg-violet-700">
+            + New order
+          </a>
+        </div>
+      </header>
+
+      <div class="space-y-8 p-4 sm:p-6 lg:p-8">
+
+        <!-- KPI section -->
+        <section aria-labelledby="kpi-heading">
+          <div class="mb-4 flex items-center justify-between gap-3">
+            <h2 id="kpi-heading" class="text-lg font-bold">Key metrics</h2>
+            <span class="text-xs text-slate-500">Compared with previous 30 days</span>
+          </div>
+
+          <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-4">
+
+            <article class="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+              <div class="flex items-center justify-between gap-3">
+                <h3 class="text-sm font-medium text-slate-500">Total revenue</h3>
+                <span class="flex size-10 items-center justify-center rounded-xl bg-violet-50 text-lg text-violet-600" aria-hidden="true">$</span>
+              </div>
+              <p class="mt-4 text-3xl font-bold tracking-tight">$48,294</p>
+              <p class="mt-3 text-sm"><span class="font-semibold text-emerald-600">↑ 12.8%</span> <span class="text-slate-500">vs. last month</span></p>
+              <div class="mt-4 h-1.5 overflow-hidden rounded-full bg-slate-100">
+                <div class="h-full w-3/4 rounded-full bg-violet-500"></div>
+              </div>
+            </article>
+
+            <article class="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+              <div class="flex items-center justify-between gap-3">
+                <h3 class="text-sm font-medium text-slate-500">Active users</h3>
+                <span class="flex size-10 items-center justify-center rounded-xl bg-sky-50 text-lg text-sky-600" aria-hidden="true">♙</span>
+              </div>
+              <p class="mt-4 text-3xl font-bold tracking-tight">8,549</p>
+              <p class="mt-3 text-sm"><span class="font-semibold text-emerald-600">↑ 8.2%</span> <span class="text-slate-500">vs. last month</span></p>
+              <div class="mt-4 h-1.5 overflow-hidden rounded-full bg-slate-100">
+                <div class="h-full w-2/3 rounded-full bg-sky-500"></div>
+              </div>
+            </article>
+
+            <article class="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+              <div class="flex items-center justify-between gap-3">
+                <h3 class="text-sm font-medium text-slate-500">Conversion rate</h3>
+                <span class="flex size-10 items-center justify-center rounded-xl bg-emerald-50 text-lg text-emerald-600" aria-hidden="true">%</span>
+              </div>
+              <p class="mt-4 text-3xl font-bold tracking-tight">3.62%</p>
+              <p class="mt-3 text-sm"><span class="font-semibold text-emerald-600">↑ 1.4%</span> <span class="text-slate-500">vs. last month</span></p>
+              <div class="mt-4 h-1.5 overflow-hidden rounded-full bg-slate-100">
+                <div class="h-full w-1/2 rounded-full bg-emerald-500"></div>
+              </div>
+            </article>
+
+            <article class="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+              <div class="flex items-center justify-between gap-3">
+                <h3 class="text-sm font-medium text-slate-500">Average order</h3>
+                <span class="flex size-10 items-center justify-center rounded-xl bg-amber-50 text-lg text-amber-600" aria-hidden="true">↗</span>
+              </div>
+              <p class="mt-4 text-3xl font-bold tracking-tight">$126.40</p>
+              <p class="mt-3 text-sm"><span class="font-semibold text-rose-600">↓ 2.1%</span> <span class="text-slate-500">vs. last month</span></p>
+              <div class="mt-4 h-1.5 overflow-hidden rounded-full bg-slate-100">
+                <div class="h-full w-2/5 rounded-full bg-amber-500"></div>
+              </div>
+            </article>
+
+          </div>
+        </section>
+
+        <!-- Analytics section -->
+        <section id="analytics" aria-labelledby="analytics-heading">
+          <div class="mb-4 flex flex-wrap items-center justify-between gap-3">
+            <div>
+              <h2 id="analytics-heading" class="text-lg font-bold">Performance</h2>
+              <p class="mt-1 text-sm text-slate-500">Track revenue and understand your traffic.</p>
+            </div>
+            <span class="rounded-full bg-emerald-50 px-3 py-1.5 text-xs font-semibold text-emerald-700">● Live overview</span>
+          </div>
+
+          <div class="grid grid-cols-1 gap-4 xl:grid-cols-3">
+
+            <!-- Revenue chart -->
+            <article class="min-w-0 rounded-2xl border border-slate-200 bg-white p-5 shadow-sm sm:p-6 xl:col-span-2">
+              <div class="flex flex-wrap items-start justify-between gap-3">
+                <div>
+                  <h3 class="font-semibold">Revenue over time</h3>
+                  <p class="mt-1 text-sm text-slate-500">Monthly revenue performance</p>
+                </div>
+                <div class="text-right">
+                  <p class="text-2xl font-bold">$48,294</p>
+                  <p class="mt-1 text-xs font-semibold text-emerald-600">+12.8% growth</p>
+                </div>
+              </div>
+
+              <div class="mt-6">
+                <svg viewBox="0 0 600 250" role="img" aria-labelledby="chart-title chart-desc" class="h-auto w-full">
+                  <title id="chart-title">Revenue trend</title>
+                  <desc id="chart-desc">Illustrative revenue rises overall from January through July, with some monthly fluctuations.</desc>
+                  <defs>
+                    <linearGradient id="revenue-fill" x1="0" x2="0" y1="0" y2="1">
+                      <stop offset="0%" stop-color="#8b5cf6" stop-opacity="0.24"/>
+                      <stop offset="100%" stop-color="#8b5cf6" stop-opacity="0"/>
+                    </linearGradient>
+                  </defs>
+                  <g stroke="#e2e8f0" stroke-dasharray="4 5">
+                    <line x1="45" y1="30" x2="580" y2="30"/>
+                    <line x1="45" y1="75" x2="580" y2="75"/>
+                    <line x1="45" y1="120" x2="580" y2="120"/>
+                    <line x1="45" y1="165" x2="580" y2="165"/>
+                    <line x1="45" y1="210" x2="580" y2="210"/>
+                  </g>
+                  <g fill="#94a3b8" font-size="11">
+                    <text x="4" y="34">$15k</text>
+                    <text x="4" y="79">$12k</text>
+                    <text x="10" y="124">$9k</text>
+                    <text x="10" y="169">$6k</text>
+                    <text x="10" y="214">$3k</text>
+                    <text x="45" y="238">Jan</text>
+                    <text x="130" y="238">Feb</text>
+                    <text x="215" y="238">Mar</text>
+                    <text x="300" y="238">Apr</text>
+                    <text x="385" y="238">May</text>
+                    <text x="470" y="238">Jun</text>
+                    <text x="555" y="238">Jul</text>
+                  </g>
+                  <path d="M45 175 L130 145 L215 158 L300 105 L385 122 L470 68 L555 42 L555 210 L45 210 Z" fill="url(#revenue-fill)"/>
+                  <path d="M45 175 L130 145 L215 158 L300 105 L385 122 L470 68 L555 42" fill="none" stroke="#8b5cf6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                  <g fill="#ffffff" stroke="#8b5cf6" stroke-width="3">
+                    <circle cx="45" cy="175" r="4"/>
+                    <circle cx="130" cy="145" r="4"/>
+                    <circle cx="215" cy="158" r="4"/>
+                    <circle cx="300" cy="105" r="4"/>
+                    <circle cx="385" cy="122" r="4"/>
+                    <circle cx="470" cy="68" r="4"/>
+                    <circle cx="555" cy="42" r="4"/>
+                  </g>
+                </svg>
+              </div>
+
+              <div class="mt-4 flex flex-wrap items-center gap-x-5 gap-y-2 text-xs text-slate-500">
+                <span class="flex items-center gap-2"><span class="size-2.5 rounded-full bg-violet-500"></span>Revenue</span>
+                <span>Illustrative sample data</span>
+              </div>
+            </article>
+
+            <!-- Traffic sources -->
+            <article class="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm sm:p-6">
+              <div>
+                <h3 class="font-semibold">Traffic sources</h3>
+                <p class="mt-1 text-sm text-slate-500">Where visitors come from</p>
+              </div>
+
+              <div class="mt-7 space-y-6">
+                <div>
+                  <div class="mb-2 flex items-center justify-between gap-3 text-sm">
+                    <span class="font-medium">Direct</span><span class="font-semibold">38%</span>
+                  </div>
+                  <div class="h-2.5 rounded-full bg-slate-100"><div class="h-2.5 w-[38%] rounded-full bg-violet-500"></div></div>
+                </div>
+                <div>
+                  <div class="mb-2 flex items-center justify-between gap-3 text-sm">
+                    <span class="font-medium">Organic search</span><span class="font-semibold">29%</span>
+                  </div>
+                  <div class="h-2.5 rounded-full bg-slate-100"><div class="h-2.5 w-[29%] rounded-full bg-sky-500"></div></div>
+                </div>
+                <div>
+                  <div class="mb-2 flex items-center justify-between gap-3 text-sm">
+                    <span class="font-medium">Social media</span><span class="font-semibold">21%</span>
+                  </div>
+                  <div class="h-2.5 rounded-full bg-slate-100"><div class="h-2.5 w-[21%] rounded-full bg-emerald-500"></div></div>
+                </div>
+                <div>
+                  <div class="mb-2 flex items-center justify-between gap-3 text-sm">
+                    <span class="font-medium">Referral</span><span class="font-semibold">12%</span>
+                  </div>
+                  <div class="h-2.5 rounded-full bg-slate-100"><div class="h-2.5 w-[12%] rounded-full bg-amber-500"></div></div>
+                </div>
+              </div>
+
+              <div class="mt-8 rounded-xl bg-slate-50 p-4">
+                <p class="text-sm font-semibold">Top source</p>
+                <p class="mt-1 text-sm text-slate-500">Direct traffic accounts for 38% of visits.</p>
+              </div>
+            </article>
+
+          </div>
+        </section>
+
+        <!-- Recent orders table -->
+        <section id="orders" aria-labelledby="orders-heading">
+          <div class="mb-4 flex flex-wrap items-center justify-between gap-3">
+            <div>
+              <h2 id="orders-heading" class="text-lg font-bold">Recent orders</h2>
+              <p class="mt-1 text-sm text-slate-500">A snapshot of your latest transactions.</p>
+            </div>
+            <a href="#orders" class="text-sm font-semibold text-violet-700 hover:text-violet-900">View all orders →</a>
+          </div>
+
+          <div class="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm">
+            <div class="overflow-x-auto">
+              <table class="w-full min-w-[640px] text-left text-sm">
+                <caption class="sr-only">Recent orders, customers, dates, amounts and payment status</caption>
+                <thead class="bg-slate-50 text-xs uppercase tracking-wide text-slate-500">
+                  <tr>
+                    <th scope="col" class="px-5 py-4 font-semibold">Order</th>
+                    <th scope="col" class="px-5 py-4 font-semibold">Customer</th>
+                    <th scope="col" class="px-5 py-4 font-semibold">Date</th>
+                    <th scope="col" class="px-5 py-4 font-semibold">Amount</th>
+                    <th scope="col" class="px-5 py-4 font-semibold">Status</th>
+                  </tr>
+                </thead>
+                <tbody class="divide-y divide-slate-100">
+                  <tr class="hover:bg-slate-50">
+                    <td class="whitespace-nowrap px-5 py-4 font-semibold">#ORD-2048</td>
+                    <td class="whitespace-nowrap px-5 py-4">Olivia Martin</td>
+                    <td class="whitespace-nowrap px-5 py-4 text-slate-500">Oct 13, 2026</td>
+                    <td class="whitespace-nowrap px-5 py-4 font-semibold">$248.00</td>
+                    <td class="px-5 py-4"><span class="inline-flex rounded-full bg-emerald-50 px-2.5 py-1 text-xs font-semibold text-emerald-700">Completed</span></td>
+                  </tr>
+                  <tr class="hover:bg-slate-50">
+                    <td class="whitespace-nowrap px-5 py-4 font-semibold">#ORD-2047</td>
+                    <td class="whitespace-nowrap px-5 py-4">Liam Johnson</td>
+                    <td class="whitespace-nowrap px-5 py-4 text-slate-500">Oct 12, 2026</td>
+                    <td class="whitespace-nowrap px-5 py-4 font-semibold">$125.50</td>
+                    <td class="px-5 py-4"><span class="inline-flex rounded-full bg-amber-50 px-2.5 py-1 text-xs font-semibold text-amber-700">Pending</span></td>
+                  </tr>
+                  <tr class="hover:bg-slate-50">
+                    <td class="whitespace-nowrap px-5 py-4 font-semibold">#ORD-2046</td>
+                    <td class="whitespace-nowrap px-5 py-4">Sophia Williams</td>
+                    <td class="whitespace-nowrap px-5 py-4 text-slate-500">Oct 12, 2026</td>
+                    <td class="whitespace-nowrap px-5 py-4 font-semibold">$389.00</td>
+                    <td class="px-5 py-4"><span class="inline-flex rounded-full bg-emerald-50 px-2.5 py-1 text-xs font-semibold text-emerald-700">Completed</span></td>
+                  </tr>
+                  <tr class="hover:bg-slate-50">
+                    <td class="whitespace-nowrap px-5 py-4 font-semibold">#ORD-2045</td>
+                    <td class="whitespace-nowrap px-5 py-4">Noah Brown</td>
+                    <td class="whitespace-nowrap px-5 py-4 text-slate-500">Oct 11, 2026</td>
+                    <td class="whitespace-nowrap px-5 py-4 font-semibold">$74.99</td>
+                    <td class="px-5 py-4"><span class="inline-flex rounded-full bg-rose-50 px-2.5 py-1 text-xs font-semibold text-rose-700">Cancelled</span></td>
+                  </tr>
+                  <tr class="hover:bg-slate-50">
+                    <td class="whitespace-nowrap px-5 py-4 font-semibold">#ORD-2044</td>
+                    <td class="whitespace-nowrap px-5 py-4">Emma Davis</td>
+                    <td class="whitespace-nowrap px-5 py-4 text-slate-500">Oct 10, 2026</td>
+                    <td class="whitespace-nowrap px-5 py-4 font-semibold">$192.25</td>
+                    <td class="px-5 py-4"><span class="inline-flex rounded-full bg-emerald-50 px-2.5 py-1 text-xs font-semibold text-emerald-700">Completed</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="flex flex-col gap-2 border-t border-slate-200 px-5 py-4 text-xs text-slate-500 sm:flex-row sm:items-center sm:justify-between">
+              <p>Showing 5 sample orders</p>
+              <p>Demo data · Not connected to a live store</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="border-t border-slate-200 pt-5 text-center text-xs text-slate-500 sm:text-left">
+          © 2026 Elevate Analytics. Dashboard demo.
+        </footer>
+
+      </div>
+    </main>
+  </div>
+
+</body>
+</html>
