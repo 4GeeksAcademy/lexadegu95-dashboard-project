@@ -25,13 +25,4 @@ $ pip3 install flask && python3 server.py
 </head>
 ```
 
-- 如果你想使用 Tailwind CSS，也可以选择在同一个 `<head>` 中通过官方的 Tailwind CSS v4 CDN 引入：
-
-```html
-<head>
-  ...
-  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-  <link rel="stylesheet" type="text/css" href="styles.css">
-  ...
-</head>
-```
+此仪表盘使用官方 Tailwind CSS v4 CLI 在本地编译样式。请参阅 [README.md](README.md) 了解依赖安装、开发和生产构建步骤。

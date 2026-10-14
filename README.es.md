@@ -23,16 +23,7 @@ $ pip3 install flask && python3 server.py
 </head>
 ```
 
-- Si deseas usar Tailwind CSS, agrégalo de forma opcional mediante el CDN oficial de Tailwind CSS v4 dentro del mismo `<head>`:
-
-```html
-<head>
-  ...
-  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-  <link rel="stylesheet" type="text/css" href="styles.css">
-  ...
-</head>
-```
+Para este panel, Tailwind CSS v4 se compila localmente mediante la CLI oficial. Consulta [README.md](README.md) para instalar las dependencias y ejecutar el desarrollo o la compilación de producción.
 
 
 ## Agradecimientos
